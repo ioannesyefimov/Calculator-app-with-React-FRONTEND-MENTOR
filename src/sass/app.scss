@@ -1,0 +1,143 @@
+@use './abstract/variables' as *;
+@use './abstract/functionality' as *;
+.App {
+    @include respond-to(medium){
+        align-items: center;
+    }
+    
+    
+    height: 100vh;
+    padding-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    .calc-out-put-cont{
+        @include respond-to(medium){
+            width: 40rem;
+        }
+
+        padding: clamp(2rem, -0.727rem + 11.636vw, 4rem) clamp(2rem, -0.727rem + 11.636vw, 4rem) 0;
+        display: grid;
+        gap:1.6rem;
+       .wrapper {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+
+           .theme-label{
+            position: relative;
+            transition: .3s all ease-in-out;
+            display: flex;
+            align-items: center;
+
+            gap:2rem;
+            text-transform: uppercase;
+            
+            &::before {
+                position: absolute;
+                content: '1 2 3';
+                z-index: 3;
+                width: 100%;
+                height: 10px;
+                top: -100%;
+                font-size: 1.1rem;
+                letter-spacing: 0.25rem;
+                right: -25%;
+                text-align: center;
+            }
+
+            .theme-switcher{
+                transform: translateY(-15%);
+                    position: relative;
+                    appearance: none;
+                    border-radius: 20px;
+                    width: 5rem;
+                    height: 1.85rem;
+                
+                    
+    
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        top:18%;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        
+                    }
+                    &::-webkit-slider-thumb{
+                        appearance: none;
+                    }
+                    &::-ms-track{
+                        width: 100%;
+                        cursor: pointer;
+        
+                    }
+                    }        
+                }
+        }
+        .output-cont {
+            padding: 1rem;
+            min-height: 60px;
+            border-radius: 8px;
+        
+            .output {
+            margin-left: auto;
+             text-align: right;
+            }
+        }
+    }
+    .calc-input-cont{
+        @include respond-to(medium){
+            width: 40rem;
+        }
+        display: grid;
+        
+        padding:0 clamp(2rem, -0.727rem + 11.636vw, 4rem) ;
+        
+        .wrapper {
+            @include respond-to(medium){
+                grid-template-columns: repeat(4, minmax(min(4rem, 15vw), 1fr));
+
+            }
+            display: grid;
+            border-radius: 8px;
+            gap:1rem;
+            padding: 2rem;
+            grid-template-columns: repeat(4, minmax(4rem, 1fr));
+            button {
+                border-radius: 8px;
+                text-transform: uppercase;
+                border: none;
+            }
+            .reset-btn, .del-btn, .calc-btn {
+                padding: clamp(0.5rem, 0.023rem + 2.036vw, 0.85rem);
+            }
+
+            .reset-btn {
+                grid-column: 1/3;
+            }
+            .calc-btn {
+                grid-column: 3/5;
+            }
+            .multiply-btn {
+                display: flex;
+                justify-content: center;
+                
+                .multiply {
+                    line-height: 3rem;
+                    align-self: flex-end;
+                }
+            }
+        }
+        .wrapper2 {
+            display: grid;
+            gap:1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 1/-1;
+           
+        }
+    }
+
+}

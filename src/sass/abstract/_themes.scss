@@ -1,0 +1,146 @@
+@use './variables' as *;
+
+body[theme=first] {
+    background-color: $clr-bg-v-d-desat-blue;
+    color: $clr-text-white;
+    .wrapper {
+
+    }
+    .calc-out-put-cont {
+        .wrapper {
+            .theme-switcher {
+                background:$clr-bg-v-d-desat-blue2;
+               
+                &::after{
+                    transform: translateX(40%);
+                    background-color: $clr-keys-d-red;
+                    
+                }
+            }
+        }
+    }
+    .output-cont {
+        background-color: $clr-bg-v-d-desat-blue3;
+        color: $clr-text-white;
+        
+        
+    }
+    
+    .calc-input-cont{
+       .wrapper{
+           background-color: $clr-bg-v-d-desat-blue2;
+            button {
+                color: $clr-text-v-d-g-blue;
+                box-shadow: 1px 2px 1px 1px $clr-keys-g-orange;
+                background-color:$clr-keys-l-g-orange ;
+            }
+            .del-btn, .reset-btn {
+                
+                background-color: $clr-keys-desat-d-blue;
+                color: $clr-text-white;
+                box-shadow: 0px 2px  1px 1px $clr-keys-desat-d-blue2;
+            }
+            .calc-btn {
+                background-color: $clr-keys-red;
+                color: $clr-text-white;
+                box-shadow: 0px 2px 1px 1px $clr-keys-d-red;
+            }
+       }
+    }
+}
+body[theme=second] {
+    background-color:$clr-th2-bg-l-gray;
+    color: $clr-th2-text-v-d-g-yellow;
+    .calc-out-put-cont {
+        .wrapper {
+            .theme-switcher {
+                background:$clr-th2-bg-g-red;
+               
+                &::after{
+                    transform: translateX(150%);
+                    background-color: $clr-th2-keys-orange;
+                            
+                }
+            }
+        }
+    }
+    .output-cont {
+        background-color: $clr-th2-bg-v-l-gray;
+        color: $clr-th2-text-v-d-g-yellow;
+    }
+    .calc-input-cont{
+        .wrapper{
+           background-color: $clr-th2-bg-g-red;
+           
+           button {
+            color: $clr-th2-text-v-d-g-yellow ;
+            box-shadow: 0px 2px 1px 1px $clr-th2-keys-d-g-orange;
+            background-color:$clr-th2-keys-l-g-yellow ;
+
+            }
+            .del-btn, .reset-btn {
+                
+                background-color: $clr-th2-keys-d-mod-cyan !important;
+                color: $clr-text-white;
+                box-shadow: 0px 2px 1px 1px $clr-th2-keys-v-d-cyan;
+            }
+            .calc-btn {
+                background-color: $clr-th2-keys-orange;
+                color: $clr-text-white;
+                box-shadow: 0px 2px 1px 1px $clr-th2-keys-d-orange;
+            }
+       }
+    }
+}
+
+
+body[theme=third] {
+    background-color: $clr-th3-bg-v-d-violet;
+    color: $clr-th3-text-l-yellow;
+    .calc-out-put-cont {
+        .wrapper {
+            .theme-switcher {
+                background: $clr-th3-bg-v-d-violet2
+                ;
+               
+                &::after{
+                    transform: translateX(260%);
+                    background-color: $clr-th3-pure-cyan
+                            
+                }
+            }
+        }
+    }
+
+    .output-cont {
+        background-color:$clr-th3-bg-v-d-violet2;
+        color: $clr-th3-text-l-yellow;
+    }
+    
+
+    .calc-input-cont{
+       .wrapper{
+           background-color: $clr-th3-bg-v-d-violet2;
+            button {
+                background-color: $clr-th3-v-d-violet;
+                color: $clr-th3-text-l-yellow;
+                box-shadow: 0px 2px 1px 1px $clr-th3-d-magenta
+
+            }
+            .del-btn, .reset-btn {
+                
+                background-color: $clr-th3-keys-violet;
+                color: $clr-text-white;
+                box-shadow: 0px 2px 1px 1px $clr-th3-vivid-magenta;
+                
+            }
+            .calc-btn {
+                background-color: $clr-th3-pure-cyan;
+                color:$clr-th3-text-v-d-blue;
+                box-shadow: 0px 2px 1px 1px $clr-th3-soft-cyan;
+            }
+       }
+    }
+}
+
+

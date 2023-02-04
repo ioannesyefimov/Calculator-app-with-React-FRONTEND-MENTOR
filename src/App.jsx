@@ -113,7 +113,7 @@ function evaluate({currentOperand, previousOperand, operation}){
   const prev = parseFloat(previousOperand)
   const current = parseFloat(currentOperand)
   if(isNaN(prev) || isNaN(current)) return ''
-  if(current === 0 && operation === '/') return 'cannot divide by zero'
+  if((current === 0 || prev === 0) && operation === '/') return 'cannot divide by zero'
   let computation = ""
   switch(operation){
     case '+':
